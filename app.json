@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "NEAR Power",
+    "slug": "abisavv",
+    "scheme": "nearpower",
+    "version": "1.0.0",
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Inter-Bold",
+            "./assets/fonts/Inter-Regular",
+            "./assets/fonts/Inter-Medium",
+            "./assets/fonts/Inter-ExtraBold",
+            "./assets/fonts/Inter-Light",
+            "./assets/fonts/Inter-SemiBold",
+            "./assets/fonts/PlusJakartaSans-Bold",
+            "./assets/fonts/PlusJakartaSans-ExtraBold",
+            "./assets/fonts/PlusJakartaSans-Light",
+            "./assets/fonts/PlusJakartaSans-Medium",
+            "./assets/fonts/PlusJakartaSans-Regular",
+            "./assets/fonts/PlusJakartaSans-SemiBold"
+          ]
+        }
+      ],
+      ["expo-sqlite"],
+      "expo-status-bar"
+    ],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    }
+  }
+}

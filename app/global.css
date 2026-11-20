@@ -1,0 +1,232 @@
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css';
+@import 'nativewind/theme';
+
+:root {
+  color-scheme: light;
+  --eclipse-plum-950: #1b1020;
+  --eclipse-plum-900: #26172e;
+  --eclipse-plum-800: #38233f;
+  --eclipse-plum-700: #4b3153;
+  --eclipse-plum-600: #62446a;
+  --eclipse-plum-500: #7c5b85;
+  --eclipse-plum-400: #9d7fa5;
+  --eclipse-plum-300: #bca6c2;
+  --eclipse-plum-200: #d8c9db;
+  --eclipse-plum-100: #eee7ef;
+  --pebble-950: #39342f;
+  --pebble-900: #514a43;
+  --pebble-800: #6c635b;
+  --pebble-700: #847a71;
+  --pebble-600: #a1978e;
+  --pebble-500: #bdb4ab;
+  --pebble-400: #d0c8c0;
+  --pebble-300: #d9d3cc;
+  --pebble-200: #e8e2db;
+  --pebble-100: #f3efeb;
+  --pebble-50: #faf8f5;
+  --soft-mauve: #8a6b8f;
+  --soft-mauve-light: #b99dbd;
+  --soft-mauve-dark: #634969;
+
+  --app-hero: #d0c8c0;
+  --app-on-hero: #ffffff;
+  --app-hero-overlay: rgba(255, 255, 255, 0.10);
+
+  --app-primary: #26172e;
+  --app-on-primary: #ffffff;
+  --app-primary-hover: #38233f;
+  --app-primary-container: #eee7ef;
+  --app-on-primary-container: #26172e;
+  --app-secondary: #d9d3cc;
+  --app-on-secondary: #39342f;
+  --app-secondary-hover: #cec7bf;
+  --app-secondary-container: #f3efeb;
+  --app-on-secondary-container: #514a43;
+  --app-tertiary: #8a6b8f;
+  --app-on-tertiary: #ffffff;
+  --app-tertiary-container: #f0e8f1;
+  --app-on-tertiary-container: #49364e;
+  --app-background: #f7f4f0;
+  --app-surface: #ffffff;
+  --app-surface-secondary: #f3efeb;
+  --app-surface-tertiary: #e8e2db;
+  --app-surface-elevated: #ffffff;
+  --app-text: #26172e;
+  --app-text-secondary: #655b62;
+  --app-text-muted: #897f85;
+  --app-text-inverse: #ffffff;
+  --app-border: #d9d3cc;
+  --app-border-strong: #bdb4ab;
+  --app-divider: #e8e2db;
+  --app-success: #347052;
+  --app-success-bg: #e6f1e9;
+  --app-warning: #94621f;
+  --app-warning-bg: #f8f0df;
+  --app-danger: #b13e4b;
+  --app-danger-bg: #f9e8ea;
+  --app-info: #426a85;
+  --app-info-bg: #e8f0f5;
+  --app-input: #ffffff;
+  --app-input-border: #d0c8c0;
+  --app-input-focus: #7c5b85;
+  --app-placeholder: #897f85;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --app-hero: #38233f;
+    --app-on-hero: #f7f1f8;
+    --app-hero-overlay: rgba(255, 255, 255, 0.09);
+
+    --app-primary: #c7acce;
+    --app-on-primary: #26172e;
+    --app-primary-hover: #d8c4dc;
+    --app-primary-container: #432e4a;
+    --app-on-primary-container: #f1e8f2;
+    --app-secondary: #d9d3cc;
+    --app-on-secondary: #302a30;
+    --app-secondary-hover: #e7e1da;
+    --app-secondary-container: #39323a;
+    --app-on-secondary-container: #e8e2db;
+    --app-tertiary: #c5a3cb;
+    --app-on-tertiary: #291b2d;
+    --app-tertiary-container: #49364e;
+    --app-on-tertiary-container: #f0e8f1;
+    --app-background: #17111b;
+    --app-surface: #211927;
+    --app-surface-secondary: #2b2031;
+    --app-surface-tertiary: #382b3d;
+    --app-surface-elevated: #302438;
+    --app-text: #f5f0f5;
+    --app-text-secondary: #d0c5d2;
+    --app-text-muted: #a99bae;
+    --app-text-inverse: #26172e;
+    --app-border: #493a4e;
+    --app-border-strong: #65516c;
+    --app-divider: #382b3d;
+    --app-success: #85c9a0;
+    --app-success-bg: #20392d;
+    --app-warning: #e8be78;
+    --app-warning-bg: #41321e;
+    --app-danger: #ef929b;
+    --app-danger-bg: #44272d;
+    --app-info: #91bbd5;
+    --app-info-bg: #233847;
+    --app-input: #2b2031;
+    --app-input-border: #493a4e;
+    --app-input-focus: #c7acce;
+    --app-placeholder: #a99bae;
+  }
+}
+
+@theme inline {
+  --color-hero: var(--app-hero);
+  --color-on-hero: var(--app-on-hero);
+  --color-hero-overlay: var(--app-hero-overlay);
+  --color-primary: var(--app-primary);
+  --color-on-primary: var(--app-on-primary);
+  --color-primary-hover: var(--app-primary-hover);
+  --color-primary-container: var(--app-primary-container);
+  --color-on-primary-container: var(--app-on-primary-container);
+  --color-secondary: var(--app-secondary);
+  --color-on-secondary: var(--app-on-secondary);
+  --color-secondary-hover: var(--app-secondary-hover);
+  --color-secondary-container: var(--app-secondary-container);
+  --color-on-secondary-container: var(--app-on-secondary-container);
+  --color-tertiary: var(--app-tertiary);
+  --color-on-tertiary: var(--app-on-tertiary);
+  --color-tertiary-container: var(--app-tertiary-container);
+  --color-on-tertiary-container: var(--app-on-tertiary-container);
+  --color-background: var(--app-background);
+  --color-surface: var(--app-surface);
+  --color-surface-secondary: var(--app-surface-secondary);
+  --color-surface-tertiary: var(--app-surface-tertiary);
+  --color-surface-elevated: var(--app-surface-elevated);
+  --color-text: var(--app-text);
+  --color-text-secondary: var(--app-text-secondary);
+  --color-text-muted: var(--app-text-muted);
+  --color-text-inverse: var(--app-text-inverse);
+  --color-border: var(--app-border);
+  --color-border-strong: var(--app-border-strong);
+  --color-divider: var(--app-divider);
+  --color-success: var(--app-success);
+  --color-success-bg: var(--app-success-bg);
+  --color-warning: var(--app-warning);
+  --color-warning-bg: var(--app-warning-bg);
+  --color-danger: var(--app-danger);
+  --color-danger-bg: var(--app-danger-bg);
+  --color-info: var(--app-info);
+  --color-info-bg: var(--app-info-bg);
+  --color-input: var(--app-input);
+  --color-input-border: var(--app-input-border);
+  --color-input-focus: var(--app-input-focus);
+  --color-placeholder: var(--app-placeholder);
+  --font-sans: 'sans-serif';
+  --font-jakarta: 'sans-serif';
+}
+
+@layer utilities {
+  .ui-screen {
+    @apply bg-background flex-1;
+  }
+  .ui-card {
+    @apply border-border bg-surface rounded-3xl border p-4;
+  }
+  .ui-card-secondary {
+    @apply border-border bg-surface-secondary rounded-3xl border p-4;
+  }
+  .ui-card-elevated {
+    @apply bg-surface-elevated rounded-3xl p-4;
+  }
+  .ui-heading {
+    @apply text-text text-2xl font-bold;
+  }
+  .ui-subheading {
+    @apply text-text text-lg font-semibold;
+  }
+  .ui-body {
+    @apply text-text-secondary text-base;
+  }
+  .ui-caption {
+    @apply text-text-muted text-xs;
+  }
+  .ui-input {
+    @apply border-input-border bg-input text-text h-14 rounded-2xl border px-4 text-base;
+  }
+  .ui-button-primary {
+    @apply bg-primary min-h-12 items-center justify-center rounded-2xl px-5 py-3;
+  }
+  .ui-button-secondary {
+    @apply bg-secondary min-h-12 items-center justify-center rounded-2xl px-5 py-3;
+  }
+  .ui-button-tertiary {
+    @apply bg-tertiary min-h-12 items-center justify-center rounded-2xl px-5 py-3;
+  }
+  .ui-pill {
+    @apply bg-transparent px-3 py-1.5;
+  }
+  .ui-pill-active {
+  @apply bg-primary-container h-16 w-20 mt-0.5 flex-row items-center justify-center rounded-full;
+}
+  .ui-pill-success {
+    @apply bg-success-bg self-start rounded-full px-3 py-1.5;
+  }
+  .ui-pill-warning {
+    @apply bg-warning-bg self-start rounded-full px-3 py-1.5;
+  }
+  .ui-pill-danger {
+    @apply bg-danger-bg self-start rounded-full px-3 py-1.5;
+  }
+  .ui-divider {
+    @apply bg-divider h-px;
+  }
+  .ui-glyph {
+    @apply size-6;
+  }
+  .ui-icon {
+    @apply size-12 items-center justify-center;
+  }
+}
